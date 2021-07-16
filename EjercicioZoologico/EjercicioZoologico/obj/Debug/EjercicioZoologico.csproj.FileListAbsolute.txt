@@ -1,0 +1,7 @@
+C:\Users\Tarde\Desktop\VanesaGR\curso_net\EjercicioZoologico\EjercicioZoologico\bin\Debug\EjercicioZoologico.exe.config
+C:\Users\Tarde\Desktop\VanesaGR\curso_net\EjercicioZoologico\EjercicioZoologico\bin\Debug\EjercicioZoologico.exe
+C:\Users\Tarde\Desktop\VanesaGR\curso_net\EjercicioZoologico\EjercicioZoologico\bin\Debug\EjercicioZoologico.pdb
+C:\Users\Tarde\Desktop\VanesaGR\curso_net\EjercicioZoologico\EjercicioZoologico\obj\Debug\EjercicioZoologico.csproj.AssemblyReference.cache
+C:\Users\Tarde\Desktop\VanesaGR\curso_net\EjercicioZoologico\EjercicioZoologico\obj\Debug\EjercicioZoologico.csproj.CoreCompileInputs.cache
+C:\Users\Tarde\Desktop\VanesaGR\curso_net\EjercicioZoologico\EjercicioZoologico\obj\Debug\EjercicioZoologico.exe
+C:\Users\Tarde\Desktop\VanesaGR\curso_net\EjercicioZoologico\EjercicioZoologico\obj\Debug\EjercicioZoologico.pdb
