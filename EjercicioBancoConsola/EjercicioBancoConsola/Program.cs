@@ -36,6 +36,7 @@ namespace EjercicioBancoConsola
                         miCuenta.Psaldo = double.Parse(Console.ReadLine());
 
                         Console.WriteLine("CUENTA CREADA");
+                        Console.Clear();
                         break;
 
                     case "2":
@@ -47,8 +48,16 @@ namespace EjercicioBancoConsola
                     case "3":
                         Console.WriteLine("Escriba la cantidad a retirar");
                         n2 = int.Parse(Console.ReadLine());
-                        miCuenta.Psaldo = (miCuenta.Psaldo) - n2;
-                        miCuenta.Retirar();
+                        
+                        if (n2 > (miCuenta.Psaldo))
+                        {
+                            Console.WriteLine("Error. Falta saldo");
+                        }
+                        else
+                        {
+                            miCuenta.Psaldo = (miCuenta.Psaldo) - n2;
+                        }
+
                         Console.ReadLine();
                         break;
 

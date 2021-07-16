@@ -42,10 +42,7 @@ namespace EjercicioBancoConsola
                 Console.WriteLine("El saldo total es: " + saldo);
             }
 
-            public void Retirar()
-            {
-            Console.WriteLine("Tras retirar, el saldo es: " + saldo);
-            }
+           
         }
     
 }
