@@ -1,0 +1,7 @@
+C:\Users\Tarde\Desktop\VanesaGR\curso_net\EjercicioBancoConsola\EjercicioBancoConsola\bin\Debug\EjercicioBancoConsola.exe.config
+C:\Users\Tarde\Desktop\VanesaGR\curso_net\EjercicioBancoConsola\EjercicioBancoConsola\bin\Debug\EjercicioBancoConsola.exe
+C:\Users\Tarde\Desktop\VanesaGR\curso_net\EjercicioBancoConsola\EjercicioBancoConsola\bin\Debug\EjercicioBancoConsola.pdb
+C:\Users\Tarde\Desktop\VanesaGR\curso_net\EjercicioBancoConsola\EjercicioBancoConsola\obj\Debug\EjercicioBancoConsola.csproj.AssemblyReference.cache
+C:\Users\Tarde\Desktop\VanesaGR\curso_net\EjercicioBancoConsola\EjercicioBancoConsola\obj\Debug\EjercicioBancoConsola.csproj.CoreCompileInputs.cache
+C:\Users\Tarde\Desktop\VanesaGR\curso_net\EjercicioBancoConsola\EjercicioBancoConsola\obj\Debug\EjercicioBancoConsola.exe
+C:\Users\Tarde\Desktop\VanesaGR\curso_net\EjercicioBancoConsola\EjercicioBancoConsola\obj\Debug\EjercicioBancoConsola.pdb
