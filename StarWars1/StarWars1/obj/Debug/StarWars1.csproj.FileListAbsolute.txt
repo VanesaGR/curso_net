@@ -1,0 +1,14 @@
+C:\Users\naire\source\repos\StarWars1\StarWars1\obj\Debug\StarWars1.csproj.CoreCompileInputs.cache
+C:\Users\naire\source\repos\StarWars1\StarWars1\bin\Debug\StarWars1.exe.config
+C:\Users\naire\source\repos\StarWars1\StarWars1\bin\Debug\StarWars1.exe
+C:\Users\naire\source\repos\StarWars1\StarWars1\bin\Debug\StarWars1.pdb
+C:\Users\naire\source\repos\StarWars1\StarWars1\obj\Debug\StarWars1.exe
+C:\Users\naire\source\repos\StarWars1\StarWars1\obj\Debug\StarWars1.pdb
+C:\Users\naire\source\repos\StarWars1\StarWars1\obj\Debug\StarWars1.csproj.AssemblyReference.cache
+H:\StarWars1\StarWars1\bin\Debug\StarWars1.exe.config
+H:\StarWars1\StarWars1\bin\Debug\StarWars1.exe
+H:\StarWars1\StarWars1\bin\Debug\StarWars1.pdb
+H:\StarWars1\StarWars1\obj\Debug\StarWars1.csproj.AssemblyReference.cache
+H:\StarWars1\StarWars1\obj\Debug\StarWars1.csproj.CoreCompileInputs.cache
+H:\StarWars1\StarWars1\obj\Debug\StarWars1.exe
+H:\StarWars1\StarWars1\obj\Debug\StarWars1.pdb
