@@ -21,12 +21,12 @@ namespace EjercicioZoologico
         {
             if (vuela == true)
             {
-                Console.WriteLine("Soy un insecto llamado: " + nombreAnimal + "\nde la especie: " + especie + "\nPeso en kg: "
+                Console.WriteLine("Soy un ave llamado: " + nombreAnimal + "\nde la especie: " + especie + "\nPeso en kg: "
                 + peso + "\nEstoy en la jaula: " + jaula + "\nY vuelo");
             }
             else
             {
-                Console.WriteLine("Soy un insecto llamado: " + nombreAnimal + "\nde la especie: " + especie + "\nPeso en kg: "
+                Console.WriteLine("Soy un ave llamado: " + nombreAnimal + "\nde la especie: " + especie + "\nPeso en kg: "
                 + peso + "\nEstoy en la jaula: " + jaula + "\nY no vuelo");
             }
         }
