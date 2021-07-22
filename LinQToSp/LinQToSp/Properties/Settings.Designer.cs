@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace RepasoJueves.Properties {
+namespace LinQToSp.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
@@ -26,11 +26,11 @@ namespace RepasoJueves.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=ASATA406\\SQLEXPRESSVANESA;Initial Catalog=REPASO_JUEVES;Persist Secur" +
-            "ity Info=True;User ID=sa;Password=1234")]
-        public string REPASO_JUEVESConnectionString {
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=ASATA406\\SQLEXPRESSVANESA;Initial Catalog=LinQToSql;Persist Security " +
+            "Info=True;User ID=sa;Password=1234")]
+        public string LinQToSqlConnectionString {
             get {
-                return ((string)(this["REPASO_JUEVESConnectionString"]));
+                return ((string)(this["LinQToSqlConnectionString"]));
             }
         }
     }

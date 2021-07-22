@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{B9A3EA42-42E5-4A46-A4BA-803F36A63362}</ProjectGuid>
+    <ProjectGuid>{6EB39B03-966D-4C79-B2CB-307C40E5EDDA}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>RepasoJueves</RootNamespace>
-    <AssemblyName>RepasoJueves</AssemblyName>
+    <RootNamespace>LinQToSp</RootNamespace>
+    <AssemblyName>LinQToSp</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -94,13 +94,13 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Scripts sql\ELIMINAR CLIENTE.sql" />
-    <Content Include="Scripts sql\INSERTAR CLIENTE JUEVES.sql" />
-    <Content Include="Scripts sql\MODIFICAR CLIENTE JUEVES.sql" />
-    <Content Include="Scripts sql\MOSTRAR CLIENTES JUEVES.sql" />
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
   </ItemGroup>
   <ItemGroup>
-    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+    <Content Include="Scripts\Buscar cliente Linq.sql" />
+    <Content Include="Scripts\Eliminar cliente Linq.sql" />
+    <Content Include="Scripts\Insertar cliente linq.sql" />
+    <Content Include="Scripts\Modificar cliente Linq.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

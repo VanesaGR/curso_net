@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31515.178
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinQToSp", "LinQToSp\LinQToSp.csproj", "{6EB39B03-966D-4C79-B2CB-307C40E5EDDA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6EB39B03-966D-4C79-B2CB-307C40E5EDDA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6EB39B03-966D-4C79-B2CB-307C40E5EDDA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6EB39B03-966D-4C79-B2CB-307C40E5EDDA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6EB39B03-966D-4C79-B2CB-307C40E5EDDA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F8B5AD5B-FD39-4870-9E58-136BB722045A}
+	EndGlobalSection
+EndGlobal

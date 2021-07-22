@@ -1,0 +1,10 @@
+C:\Users\Tarde\Desktop\VanesaGR\curso_net\LinQToSp\LinQToSp\obj\Debug\LinQToSp.csproj.AssemblyReference.cache
+C:\Users\Tarde\Desktop\VanesaGR\curso_net\LinQToSp\LinQToSp\obj\Debug\LinQToSp.Form1.resources
+C:\Users\Tarde\Desktop\VanesaGR\curso_net\LinQToSp\LinQToSp\obj\Debug\LinQToSp.Properties.Resources.resources
+C:\Users\Tarde\Desktop\VanesaGR\curso_net\LinQToSp\LinQToSp\obj\Debug\LinQToSp.csproj.GenerateResource.cache
+C:\Users\Tarde\Desktop\VanesaGR\curso_net\LinQToSp\LinQToSp\obj\Debug\LinQToSp.csproj.CoreCompileInputs.cache
+C:\Users\Tarde\Desktop\VanesaGR\curso_net\LinQToSp\LinQToSp\bin\Debug\LinQToSp.exe.config
+C:\Users\Tarde\Desktop\VanesaGR\curso_net\LinQToSp\LinQToSp\bin\Debug\LinQToSp.exe
+C:\Users\Tarde\Desktop\VanesaGR\curso_net\LinQToSp\LinQToSp\bin\Debug\LinQToSp.pdb
+C:\Users\Tarde\Desktop\VanesaGR\curso_net\LinQToSp\LinQToSp\obj\Debug\LinQToSp.exe
+C:\Users\Tarde\Desktop\VanesaGR\curso_net\LinQToSp\LinQToSp\obj\Debug\LinQToSp.pdb
