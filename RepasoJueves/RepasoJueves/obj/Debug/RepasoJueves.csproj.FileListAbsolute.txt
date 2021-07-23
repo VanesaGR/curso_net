@@ -7,3 +7,4 @@ C:\Users\Tarde\Desktop\VanesaGR\curso_net\RepasoJueves\RepasoJueves\bin\Debug\Re
 C:\Users\Tarde\Desktop\VanesaGR\curso_net\RepasoJueves\RepasoJueves\bin\Debug\RepasoJueves.pdb
 C:\Users\Tarde\Desktop\VanesaGR\curso_net\RepasoJueves\RepasoJueves\obj\Debug\RepasoJueves.exe
 C:\Users\Tarde\Desktop\VanesaGR\curso_net\RepasoJueves\RepasoJueves\obj\Debug\RepasoJueves.pdb
+C:\Users\Tarde\Desktop\VanesaGR\curso_net\RepasoJueves\RepasoJueves\obj\Debug\RepasoJueves.csproj.AssemblyReference.cache

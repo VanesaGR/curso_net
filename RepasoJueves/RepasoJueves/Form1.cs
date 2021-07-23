@@ -31,25 +31,49 @@ namespace RepasoJueves
         {
             try
             {
-                ClienteJueves.Insertarcliente(txtIdCliente.Text, txtApellidos.Text, txtNombre.Text);
-                this.MostrarClientes();
+                if (txtIdCliente.Text == "" || txtNombre.Text == "" || txtApellidos.Text == "")
+                {
+                    MessageBox.Show("Error. Faltan datos");
+                }
+                else
+                {
+                    ClienteJueves.Insertarcliente(txtIdCliente.Text, txtApellidos.Text, txtNombre.Text);
+                    this.MostrarClientes();
+                }
             }
             catch
             {
-                MessageBox.Show("Ha habido un error en la inserción de datos");
+                MessageBox.Show("Clave duplicada");
             }
+            
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            ClienteJueves.EliminarCliente_JUEVES(txtIdCliente.Text);
-            this.MostrarClientes();
+            if(txtIdCliente.Text == "" || txtNombre.Text == "" || txtApellidos.Text == "")
+            {
+                MessageBox.Show("Error. Faltan datos");
+            }
+            else
+            {
+                ClienteJueves.EliminarCliente_JUEVES(txtIdCliente.Text);
+                this.MostrarClientes();
+            }
+            
         }
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
-            ClienteJueves.modificarcliente(txtIdCliente.Text, txtNombre.Text, txtApellidos.Text);
-            this.MostrarClientes();
+            if(txtIdCliente.Text == "" || txtNombre.Text =="" || txtApellidos.Text == "")
+            {
+                MessageBox.Show("Error. Faltan datos");
+            }
+            else
+            {
+                ClienteJueves.modificarcliente(txtIdCliente.Text, txtNombre.Text, txtApellidos.Text);
+                this.MostrarClientes();
+            }
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -60,17 +84,24 @@ namespace RepasoJueves
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if (comboBox1.Text == "IDCLIENTE")
+            if (txtIdCliente.Text == "" || txtNombre.Text == "" || txtApellidos.Text == "")
             {
-               dataGridView1.DataSource = ClienteJueves.buscarCliente(txtBuscar.Text);
+                MessageBox.Show("Error. Faltan datos");
             }
-            else if (comboBox1.Text == "APELLIDOS")
+            else
             {
-                dataGridView1.DataSource = ClienteJueves.BUSCAR_APELLIDOS(txtBuscar.Text);
-            }
-            else if(comboBox1.Text=="NOMBRE")
-            {
-                dataGridView1.DataSource=ClienteJueves.BUSCAR_NOMBRE(txtBuscar.Text);
+                if (comboBox1.Text == "IDCLIENTE")
+                {
+                    dataGridView1.DataSource = ClienteJueves.buscarCliente(txtBuscar.Text);
+                }
+                else if (comboBox1.Text == "APELLIDOS")
+                {
+                    dataGridView1.DataSource = ClienteJueves.BUSCAR_APELLIDOS(txtBuscar.Text);
+                }
+                else if (comboBox1.Text == "NOMBRE")
+                {
+                    dataGridView1.DataSource = ClienteJueves.BUSCAR_NOMBRE(txtBuscar.Text);
+                }
             }
             
         }
