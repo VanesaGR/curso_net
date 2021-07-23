@@ -84,25 +84,19 @@ namespace RepasoJueves
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if (txtIdCliente.Text == "" || txtNombre.Text == "" || txtApellidos.Text == "")
+            if (comboBox1.Text == "IDCLIENTE")
             {
-                MessageBox.Show("Error. Faltan datos");
+            dataGridView1.DataSource = ClienteJueves.buscarCliente(txtBuscar.Text);
             }
-            else
+            else if (comboBox1.Text == "APELLIDOS")
             {
-                if (comboBox1.Text == "IDCLIENTE")
-                {
-                    dataGridView1.DataSource = ClienteJueves.buscarCliente(txtBuscar.Text);
-                }
-                else if (comboBox1.Text == "APELLIDOS")
-                {
-                    dataGridView1.DataSource = ClienteJueves.BUSCAR_APELLIDOS(txtBuscar.Text);
-                }
-                else if (comboBox1.Text == "NOMBRE")
-                {
-                    dataGridView1.DataSource = ClienteJueves.BUSCAR_NOMBRE(txtBuscar.Text);
-                }
+            dataGridView1.DataSource = ClienteJueves.BUSCAR_APELLIDOS(txtBuscar.Text);
             }
+            else if (comboBox1.Text == "NOMBRE")
+            {
+            dataGridView1.DataSource = ClienteJueves.BUSCAR_NOMBRE(txtBuscar.Text);
+            }
+            
             
         }
 
@@ -114,6 +108,7 @@ namespace RepasoJueves
         private void btnReset_Click(object sender, EventArgs e)
         {
             this.MostrarClientes();
+            txtBuscar.Text = "";
             txtIdCliente.Text = "";
             txtNombre.Text = "";
             txtApellidos.Text = "";

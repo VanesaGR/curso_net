@@ -168,7 +168,7 @@ namespace RepasoJueves
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.button1.Location = new System.Drawing.Point(826, 449);
+            this.button1.Location = new System.Drawing.Point(961, 492);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(138, 49);
             this.button1.TabIndex = 12;
@@ -190,9 +190,9 @@ namespace RepasoJueves
             // btnReset
             // 
             this.btnReset.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.btnReset.Location = new System.Drawing.Point(886, 12);
+            this.btnReset.Location = new System.Drawing.Point(743, 492);
             this.btnReset.Name = "btnReset";
-            this.btnReset.Size = new System.Drawing.Size(87, 35);
+            this.btnReset.Size = new System.Drawing.Size(123, 49);
             this.btnReset.TabIndex = 14;
             this.btnReset.Text = "RESET";
             this.btnReset.UseVisualStyleBackColor = true;
