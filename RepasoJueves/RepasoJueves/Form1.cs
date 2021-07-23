@@ -29,8 +29,15 @@ namespace RepasoJueves
        
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            ClienteJueves.Insertarcliente(txtIdCliente.Text, txtApellidos.Text, txtNombre.Text);
-            this.MostrarClientes();
+            try
+            {
+                ClienteJueves.Insertarcliente(txtIdCliente.Text, txtApellidos.Text, txtNombre.Text);
+                this.MostrarClientes();
+            }
+            catch
+            {
+                MessageBox.Show("Ha habido un error en la inserción de datos");
+            }
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
