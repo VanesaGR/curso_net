@@ -94,6 +94,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Scripts sql\BUSCAR APELLIDOS JUEVES.sql" />
+    <Content Include="Scripts sql\BUSCAR CLIENTE JUEVES.sql" />
+    <Content Include="Scripts sql\BUSCAR NOMBRE JUEVES.sql" />
     <Content Include="Scripts sql\ELIMINAR CLIENTE.sql" />
     <Content Include="Scripts sql\INSERTAR CLIENTE JUEVES.sql" />
     <Content Include="Scripts sql\MODIFICAR CLIENTE JUEVES.sql" />

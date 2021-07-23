@@ -1,6 +1,39 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="REPASO_JUEVES" Class="DataClasses1DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
   <Connection Mode="AppSettings" ConnectionString="Data Source=ASATA406\SQLEXPRESSVANESA;Initial Catalog=REPASO_JUEVES;Persist Security Info=True;User ID=sa" SettingsObjectName="RepasoJueves.Properties.Settings" SettingsPropertyName="REPASO_JUEVESConnectionString" Provider="System.Data.SqlClient" />
-  <Function Name="dbo.[EliminarCliente JUEVES]" Method="EliminarCliente_JUEVES">
+  <Function Name="dbo.BUSCAR_APELLIDOS" Method="BUSCAR_APELLIDOS">
+    <Parameter Name="apellidos" Type="System.String" DbType="VarChar(30)" />
+    <ElementType Name="BUSCAR_APELLIDOSResult">
+      <Column Name="IDCLIENTE" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="APELLIDOS" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="NOMBRES" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.BUSCAR_NOMBRE" Method="BUSCAR_NOMBRE">
+    <Parameter Name="nombre" Type="System.String" DbType="VarChar(30)" />
+    <ElementType Name="BUSCAR_NOMBREResult">
+      <Column Name="IDCLIENTE" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="APELLIDOS" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="NOMBRES" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.buscarCliente" Method="buscarCliente">
+    <Parameter Name="idcliente" Type="System.String" DbType="VarChar(5)" />
+    <ElementType Name="buscarClienteResult">
+      <Column Name="IDCLIENTE" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="APELLIDOS" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="NOMBRES" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.MostrarClientes" Method="MostrarClientes">
+    <ElementType Name="MostrarClientesResult">
+      <Column Name="IDCLIENTE" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="APELLIDOS" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="NOMBRES" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.modificarcliente" Method="modificarcliente">
+    <Parameter Name="idcliente" Type="System.String" DbType="VarChar(5)" />
+    <Parameter Name="nombres" Type="System.String" DbType="VarChar(30)" />
     <Parameter Name="apellidos" Type="System.String" DbType="VarChar(30)" />
     <Return Type="System.Int32" />
   </Function>
@@ -10,27 +43,8 @@
     <Parameter Name="nombres" Type="System.String" DbType="VarChar(30)" />
     <Return Type="System.Int32" />
   </Function>
-  <Function Name="dbo.modificarcliente" Method="modificarcliente">
+  <Function Name="dbo.[EliminarCliente JUEVES]" Method="EliminarCliente_JUEVES">
     <Parameter Name="idcliente" Type="System.String" DbType="VarChar(5)" />
-    <Parameter Name="nombres" Type="System.String" DbType="VarChar(30)" />
-    <Parameter Name="apellidos" Type="System.String" DbType="VarChar(30)" />
     <Return Type="System.Int32" />
-  </Function>
-  <Function Name="dbo.MostrarClientes" Method="MostrarClientes">
-    <Parameter Name="idcliente" Type="System.String" DbType="VarChar(5)" />
-    <ElementType Name="MostrarClientesResult">
-      <Column Name="IDCLIENTE" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
-      <Column Name="APELLIDOS" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
-      <Column Name="NOMBRES" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
-      <Column Name="IDCLIENTE1" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
-      <Column Name="IDCUENTA" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
-      <Column Name="SALDO" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="DIVISA" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
-      <Column Name="IDCUENTA1" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
-      <Column Name="IDMOVIMIENTO" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
-      <Column Name="TIPO" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
-      <Column Name="MONTO" Type="System.Double" DbType="Float" CanBeNull="true" />
-      <Column Name="FECHA" Type="System.DateTime" DbType="Date" CanBeNull="true" />
-    </ElementType>
   </Function>
 </Database>

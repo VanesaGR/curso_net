@@ -62,10 +62,38 @@ namespace RepasoJueves
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.[EliminarCliente JUEVES]")]
-		public int EliminarCliente_JUEVES([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(30)")] string apellidos)
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.BUSCAR_APELLIDOS")]
+		public ISingleResult<BUSCAR_APELLIDOSResult> BUSCAR_APELLIDOS([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(30)")] string apellidos)
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), apellidos);
+			return ((ISingleResult<BUSCAR_APELLIDOSResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.BUSCAR_NOMBRE")]
+		public ISingleResult<BUSCAR_NOMBREResult> BUSCAR_NOMBRE([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(30)")] string nombre)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), nombre);
+			return ((ISingleResult<BUSCAR_NOMBREResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.buscarCliente")]
+		public ISingleResult<buscarClienteResult> buscarCliente([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(5)")] string idcliente)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), idcliente);
+			return ((ISingleResult<buscarClienteResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.MostrarClientes")]
+		public ISingleResult<MostrarClientesResult> MostrarClientes()
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
+			return ((ISingleResult<MostrarClientesResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.modificarcliente")]
+		public int modificarcliente([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(5)")] string idcliente, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(30)")] string nombres, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(30)")] string apellidos)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), idcliente, nombres, apellidos);
 			return ((int)(result.ReturnValue));
 		}
 		
@@ -76,22 +104,15 @@ namespace RepasoJueves
 			return ((int)(result.ReturnValue));
 		}
 		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.modificarcliente")]
-		public int modificarcliente([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(5)")] string idcliente, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(30)")] string nombres, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(30)")] string apellidos)
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), idcliente, nombres, apellidos);
-			return ((int)(result.ReturnValue));
-		}
-		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.MostrarClientes")]
-		public ISingleResult<MostrarClientesResult> MostrarClientes([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(5)")] string idcliente)
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.[EliminarCliente JUEVES]")]
+		public int EliminarCliente_JUEVES([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(5)")] string idcliente)
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), idcliente);
-			return ((ISingleResult<MostrarClientesResult>)(result.ReturnValue));
+			return ((int)(result.ReturnValue));
 		}
 	}
 	
-	public partial class MostrarClientesResult
+	public partial class BUSCAR_APELLIDOSResult
 	{
 		
 		private string _IDCLIENTE;
@@ -100,25 +121,7 @@ namespace RepasoJueves
 		
 		private string _NOMBRES;
 		
-		private string _IDCLIENTE1;
-		
-		private string _IDCUENTA;
-		
-		private System.Nullable<double> _SALDO;
-		
-		private string _DIVISA;
-		
-		private string _IDCUENTA1;
-		
-		private string _IDMOVIMIENTO;
-		
-		private string _TIPO;
-		
-		private System.Nullable<double> _MONTO;
-		
-		private System.Nullable<System.DateTime> _FECHA;
-		
-		public MostrarClientesResult()
+		public BUSCAR_APELLIDOSResult()
 		{
 		}
 		
@@ -169,147 +172,189 @@ namespace RepasoJueves
 				}
 			}
 		}
+	}
+	
+	public partial class BUSCAR_NOMBREResult
+	{
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDCLIENTE1", DbType="VarChar(5)")]
-		public string IDCLIENTE1
+		private string _IDCLIENTE;
+		
+		private string _APELLIDOS;
+		
+		private string _NOMBRES;
+		
+		public BUSCAR_NOMBREResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDCLIENTE", DbType="VarChar(5) NOT NULL", CanBeNull=false)]
+		public string IDCLIENTE
 		{
 			get
 			{
-				return this._IDCLIENTE1;
+				return this._IDCLIENTE;
 			}
 			set
 			{
-				if ((this._IDCLIENTE1 != value))
+				if ((this._IDCLIENTE != value))
 				{
-					this._IDCLIENTE1 = value;
+					this._IDCLIENTE = value;
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDCUENTA", DbType="VarChar(5) NOT NULL", CanBeNull=false)]
-		public string IDCUENTA
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_APELLIDOS", DbType="VarChar(30)")]
+		public string APELLIDOS
 		{
 			get
 			{
-				return this._IDCUENTA;
+				return this._APELLIDOS;
 			}
 			set
 			{
-				if ((this._IDCUENTA != value))
+				if ((this._APELLIDOS != value))
 				{
-					this._IDCUENTA = value;
+					this._APELLIDOS = value;
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SALDO", DbType="Float")]
-		public System.Nullable<double> SALDO
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NOMBRES", DbType="VarChar(30)")]
+		public string NOMBRES
 		{
 			get
 			{
-				return this._SALDO;
+				return this._NOMBRES;
 			}
 			set
 			{
-				if ((this._SALDO != value))
+				if ((this._NOMBRES != value))
 				{
-					this._SALDO = value;
+					this._NOMBRES = value;
+				}
+			}
+		}
+	}
+	
+	public partial class buscarClienteResult
+	{
+		
+		private string _IDCLIENTE;
+		
+		private string _APELLIDOS;
+		
+		private string _NOMBRES;
+		
+		public buscarClienteResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDCLIENTE", DbType="VarChar(5) NOT NULL", CanBeNull=false)]
+		public string IDCLIENTE
+		{
+			get
+			{
+				return this._IDCLIENTE;
+			}
+			set
+			{
+				if ((this._IDCLIENTE != value))
+				{
+					this._IDCLIENTE = value;
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DIVISA", DbType="VarChar(20)")]
-		public string DIVISA
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_APELLIDOS", DbType="VarChar(30)")]
+		public string APELLIDOS
 		{
 			get
 			{
-				return this._DIVISA;
+				return this._APELLIDOS;
 			}
 			set
 			{
-				if ((this._DIVISA != value))
+				if ((this._APELLIDOS != value))
 				{
-					this._DIVISA = value;
+					this._APELLIDOS = value;
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDCUENTA1", DbType="VarChar(5)")]
-		public string IDCUENTA1
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NOMBRES", DbType="VarChar(30)")]
+		public string NOMBRES
 		{
 			get
 			{
-				return this._IDCUENTA1;
+				return this._NOMBRES;
 			}
 			set
 			{
-				if ((this._IDCUENTA1 != value))
+				if ((this._NOMBRES != value))
 				{
-					this._IDCUENTA1 = value;
+					this._NOMBRES = value;
+				}
+			}
+		}
+	}
+	
+	public partial class MostrarClientesResult
+	{
+		
+		private string _IDCLIENTE;
+		
+		private string _APELLIDOS;
+		
+		private string _NOMBRES;
+		
+		public MostrarClientesResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDCLIENTE", DbType="VarChar(5) NOT NULL", CanBeNull=false)]
+		public string IDCLIENTE
+		{
+			get
+			{
+				return this._IDCLIENTE;
+			}
+			set
+			{
+				if ((this._IDCLIENTE != value))
+				{
+					this._IDCLIENTE = value;
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IDMOVIMIENTO", DbType="VarChar(5) NOT NULL", CanBeNull=false)]
-		public string IDMOVIMIENTO
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_APELLIDOS", DbType="VarChar(30)")]
+		public string APELLIDOS
 		{
 			get
 			{
-				return this._IDMOVIMIENTO;
+				return this._APELLIDOS;
 			}
 			set
 			{
-				if ((this._IDMOVIMIENTO != value))
+				if ((this._APELLIDOS != value))
 				{
-					this._IDMOVIMIENTO = value;
+					this._APELLIDOS = value;
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TIPO", DbType="VarChar(20)")]
-		public string TIPO
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NOMBRES", DbType="VarChar(30)")]
+		public string NOMBRES
 		{
 			get
 			{
-				return this._TIPO;
+				return this._NOMBRES;
 			}
 			set
 			{
-				if ((this._TIPO != value))
+				if ((this._NOMBRES != value))
 				{
-					this._TIPO = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MONTO", DbType="Float")]
-		public System.Nullable<double> MONTO
-		{
-			get
-			{
-				return this._MONTO;
-			}
-			set
-			{
-				if ((this._MONTO != value))
-				{
-					this._MONTO = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FECHA", DbType="Date")]
-		public System.Nullable<System.DateTime> FECHA
-		{
-			get
-			{
-				return this._FECHA;
-			}
-			set
-			{
-				if ((this._FECHA != value))
-				{
-					this._FECHA = value;
+					this._NOMBRES = value;
 				}
 			}
 		}

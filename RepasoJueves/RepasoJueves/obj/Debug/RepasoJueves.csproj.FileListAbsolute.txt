@@ -1,0 +1,9 @@
+C:\Users\Tarde\Desktop\VanesaGR\curso_net\RepasoJueves\RepasoJueves\obj\Debug\RepasoJueves.Form1.resources
+C:\Users\Tarde\Desktop\VanesaGR\curso_net\RepasoJueves\RepasoJueves\obj\Debug\RepasoJueves.Properties.Resources.resources
+C:\Users\Tarde\Desktop\VanesaGR\curso_net\RepasoJueves\RepasoJueves\obj\Debug\RepasoJueves.csproj.GenerateResource.cache
+C:\Users\Tarde\Desktop\VanesaGR\curso_net\RepasoJueves\RepasoJueves\obj\Debug\RepasoJueves.csproj.CoreCompileInputs.cache
+C:\Users\Tarde\Desktop\VanesaGR\curso_net\RepasoJueves\RepasoJueves\bin\Debug\RepasoJueves.exe.config
+C:\Users\Tarde\Desktop\VanesaGR\curso_net\RepasoJueves\RepasoJueves\bin\Debug\RepasoJueves.exe
+C:\Users\Tarde\Desktop\VanesaGR\curso_net\RepasoJueves\RepasoJueves\bin\Debug\RepasoJueves.pdb
+C:\Users\Tarde\Desktop\VanesaGR\curso_net\RepasoJueves\RepasoJueves\obj\Debug\RepasoJueves.exe
+C:\Users\Tarde\Desktop\VanesaGR\curso_net\RepasoJueves\RepasoJueves\obj\Debug\RepasoJueves.pdb
