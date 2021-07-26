@@ -12,25 +12,25 @@
             <TextBox Height="67" TextWrapping="Wrap"  Margin="31,0,20,0" Name="txtIdInsertar"/>
             <TextBox Height="67" TextWrapping="Wrap"  Width="179" Margin="31,40,20,40" Name="txtNombreInsertar"/>
             <TextBox Height="67" TextWrapping="Wrap"  Width="179" Margin="31,0,20,0" Name="txtEdadInsertar"/>
-            <Button Content="INSERTAR" Width="158" Height="46" Margin="0,80,0,0" Click="Button_Click"/>
+            <Button x:Name="btnInsertar" Content="INSERTAR" Width="158" Height="46" Margin="0,80,0,0" Click="Insertar"/>
         </StackPanel>
         <StackPanel HorizontalAlignment="Left" Margin="235,0,0,0" Width="235" Background="#FF81EADC">
             <Label Content="ELIMINAR" FontSize="16" FontWeight="Bold"/>
             <TextBox Height="67" TextWrapping="Wrap" Name="txtIdEliminar" Width="179" Margin="0,40,0,0"/>
-            <Label x:Name="INSERTAR_Copy" Content="Nombre" FontSize="16" Height="69" FontWeight="Bold" Margin="37,41,50,0" Background="#FF5071E2"/>
-            <Label x:Name="INSERTAR_Copy1" Content="Edad" FontSize="16" Height="69" FontWeight="Bold" Margin="37,41,50,0" Background="#FF5071E2"/>
-            <Button Content="Consulta" Width="158" Height="46" Margin="0,60,0,0"/>
-            <Button Content="Borra" Width="158" Height="46" Margin="36,60,36,0"/>
+            <Label Name="LabelNombre" Content="Nombre" FontSize="16" Height="69" FontWeight="Bold" Margin="37,41,50,0" Background="#FF5071E2"/>
+            <Label Name="LabelEdad" Content="Edad" FontSize="16" Height="69" FontWeight="Bold" Margin="37,41,50,0" Background="#FF5071E2"/>
+            <Button x:Name="btnConsultar" Content="Consulta" Width="158" Height="46" Margin="0,60,0,0" Click="Consult"/>
+            <Button x:Name="btnBorrar" Content="Borra" Width="158" Height="46" Margin="36,60,36,0" Click="Borrar_Click"/>
         </StackPanel>
         <StackPanel HorizontalAlignment="Left" Height="632" Margin="470,0,0,0" VerticalAlignment="Top" Width="223" Background="#FFF0B1DE">
             <Label Content="MODIFICAR" FontWeight="Bold" FontSize="16" />
             <TextBox Height="67" TextWrapping="Wrap" Name="txtIdModificar" Width="179" Margin="25.5,40,18.5,0"/>
-            <Button Content="Busca" Width="158" Height="46" Margin="36,60,29,0"/>
+            <Button x:Name="btnBuscar" Content="Busca" Width="158" Height="46" Margin="36,60,29,0" Click="Buscar_Click"/>
             <TextBox Height="67" TextWrapping="Wrap" Name="txtNombreModificar" Width="179" Margin="25.5,40,18.5,0"/>
             <TextBox Height="67" TextWrapping="Wrap" Name="txtEdadModificar" Width="179" Margin="25.5,40,18.5,0"/>
-            <Button Content="Modifica" Width="158" Height="46" Margin="36,60,29,0"/>
+            <Button Name="btnModificar" Content="Modifica" Width="158" Height="46" Margin="36,60,29,0" Click="Modificar_Click"/>
         </StackPanel>
-        <Grid HorizontalAlignment="Left" Height="598" Margin="693,0,0,-3" VerticalAlignment="Top" Width="503" Background="#FFB78CEA" Name="grid"/>
+        <DataGrid x:Name="DatosGrid" HorizontalAlignment="Left" Height="403" Margin="726,46,0,0" VerticalAlignment="Top" Width="462"/>
 
 
 
