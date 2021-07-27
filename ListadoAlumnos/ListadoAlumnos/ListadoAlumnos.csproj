@@ -94,6 +94,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Scripts\BASE DATOS ALUMNOS.sql" />
     <Content Include="Scripts\BUSCAR ALUMNO POR CODIGO.sql" />
     <Content Include="Scripts\BUSCAR ALUMNO POR DNI.sql" />
     <Content Include="Scripts\LISTAR ALUMNOS.sql" />
