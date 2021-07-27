@@ -1,0 +1,10 @@
+C:\Users\Tarde\Desktop\VanesaGR\curso_net\ListadoAlumnos\ListadoAlumnos\bin\Debug\ListadoAlumnos.exe.config
+C:\Users\Tarde\Desktop\VanesaGR\curso_net\ListadoAlumnos\ListadoAlumnos\bin\Debug\ListadoAlumnos.exe
+C:\Users\Tarde\Desktop\VanesaGR\curso_net\ListadoAlumnos\ListadoAlumnos\bin\Debug\ListadoAlumnos.pdb
+C:\Users\Tarde\Desktop\VanesaGR\curso_net\ListadoAlumnos\ListadoAlumnos\obj\Debug\ListadoAlumnos.csproj.AssemblyReference.cache
+C:\Users\Tarde\Desktop\VanesaGR\curso_net\ListadoAlumnos\ListadoAlumnos\obj\Debug\ListadoAlumnos.Form1.resources
+C:\Users\Tarde\Desktop\VanesaGR\curso_net\ListadoAlumnos\ListadoAlumnos\obj\Debug\ListadoAlumnos.Properties.Resources.resources
+C:\Users\Tarde\Desktop\VanesaGR\curso_net\ListadoAlumnos\ListadoAlumnos\obj\Debug\ListadoAlumnos.csproj.GenerateResource.cache
+C:\Users\Tarde\Desktop\VanesaGR\curso_net\ListadoAlumnos\ListadoAlumnos\obj\Debug\ListadoAlumnos.csproj.CoreCompileInputs.cache
+C:\Users\Tarde\Desktop\VanesaGR\curso_net\ListadoAlumnos\ListadoAlumnos\obj\Debug\ListadoAlumnos.exe
+C:\Users\Tarde\Desktop\VanesaGR\curso_net\ListadoAlumnos\ListadoAlumnos\obj\Debug\ListadoAlumnos.pdb
