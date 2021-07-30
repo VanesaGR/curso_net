@@ -286,3 +286,65 @@ ON pedido.id_cliente=cliente.id
 WHERE year(fecha)=2017 AND cantidad>=(SELECT AVG(cantidad)
 										FROM pedido
 										WHERE year(fecha)=2017);
+
+
+--REPASANDO STORED PROCEDURES--
+
+--4 PROCEDIMIENTOS: ALTAS, BAJAS, MODIFICACIONES Y CONSULTAS (BUSCAR)
+--SI HAY IDENTITY, SE IGNORA. PARA CAMBIAR ALGO, ALTER PROCEDURE
+
+--ALTAS
+CREATE PROCEDURE SP_ALTACLIENTE
+@id int,
+@nombre varchar(100),
+@apellido1 varchar(100),
+@apellido2 varchar(100),
+@ciudad varchar(100),
+@categoria int
+AS
+INSERT INTO cliente(id,nombre,apellido1,apellido2,ciudad,categoria)
+VALUES(@id,@nombre,@apellido1,@apellido2,@ciudad,@categoria);
+
+GO
+--ESTA LÍNEA PARA PROBAR EL PROCEDIMIENTO
+EXECUTE SP_ALTACLIENTE 99, 'KIKE','PEREZ','DIAZ','GIJON',300;
+
+--BAJAS
+CREATE PROCEDURE SP_BAJACLIENTE
+@real_sporting int
+AS
+DELETE FROM cliente
+WHERE id=@real_sporting
+
+GO
+--ESTA LÍNEA PARA PROBAR EL PROCEDIMIENTO
+EXECUTE SP_BAJACLIENTE 99;
+
+--MODIFICACIONES
+CREATE PROCEDURE SP_MODIFICACLIENTE
+@id int,
+@nombre varchar(100),
+@apellido1 varchar(100),
+@apellido2 varchar(100),
+@ciudad varchar(100),
+@categoria int
+AS
+UPDATE cliente 
+SET
+id=@id,
+nombre=@nombre,
+apellido1=@apellido1,
+apellido2=@apellido2,
+ciudad=@ciudad,
+categoria=@categoria
+WHERE id=@id;
+
+EXECUTE SP_MODIFICACLIENTE 99, 'we', 'ee', 'yy', 'hh', 200;
+
+--CONSULTA
+CREATE PROCEDURE SP_CONSULTACLIENTE
+@nombre varchar(100) --@id int
+AS
+SELECT *
+FROM cliente
+WHERE nombre LIKE '%nombre%'; --WHERE id=@id;
