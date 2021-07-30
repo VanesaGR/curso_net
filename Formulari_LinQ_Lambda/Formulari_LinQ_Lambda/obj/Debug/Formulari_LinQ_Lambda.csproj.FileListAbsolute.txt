@@ -1,0 +1,10 @@
+C:\Users\Tarde\source\repos\Formulari_LinQ_Lambda\Formulari_LinQ_Lambda\obj\Debug\Formulari_LinQ_Lambda.csproj.AssemblyReference.cache
+C:\Users\Tarde\source\repos\Formulari_LinQ_Lambda\Formulari_LinQ_Lambda\obj\Debug\Formulari_LinQ_Lambda.Form1.resources
+C:\Users\Tarde\source\repos\Formulari_LinQ_Lambda\Formulari_LinQ_Lambda\obj\Debug\Formulari_LinQ_Lambda.Properties.Resources.resources
+C:\Users\Tarde\source\repos\Formulari_LinQ_Lambda\Formulari_LinQ_Lambda\obj\Debug\Formulari_LinQ_Lambda.csproj.GenerateResource.cache
+C:\Users\Tarde\source\repos\Formulari_LinQ_Lambda\Formulari_LinQ_Lambda\obj\Debug\Formulari_LinQ_Lambda.csproj.CoreCompileInputs.cache
+C:\Users\Tarde\source\repos\Formulari_LinQ_Lambda\Formulari_LinQ_Lambda\bin\Debug\Formulari_LinQ_Lambda.exe.config
+C:\Users\Tarde\source\repos\Formulari_LinQ_Lambda\Formulari_LinQ_Lambda\bin\Debug\Formulari_LinQ_Lambda.exe
+C:\Users\Tarde\source\repos\Formulari_LinQ_Lambda\Formulari_LinQ_Lambda\bin\Debug\Formulari_LinQ_Lambda.pdb
+C:\Users\Tarde\source\repos\Formulari_LinQ_Lambda\Formulari_LinQ_Lambda\obj\Debug\Formulari_LinQ_Lambda.exe
+C:\Users\Tarde\source\repos\Formulari_LinQ_Lambda\Formulari_LinQ_Lambda\obj\Debug\Formulari_LinQ_Lambda.pdb

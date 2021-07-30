@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31515.178
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Formulari_LinQ_Lambda", "Formulari_LinQ_Lambda\Formulari_LinQ_Lambda.csproj", "{4F1048A1-61D4-4AC3-94E8-EC908B903417}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4F1048A1-61D4-4AC3-94E8-EC908B903417}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F1048A1-61D4-4AC3-94E8-EC908B903417}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4F1048A1-61D4-4AC3-94E8-EC908B903417}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4F1048A1-61D4-4AC3-94E8-EC908B903417}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5F0957FF-0C19-4A8C-A41E-13A6F5DAFF5E}
+	EndGlobalSection
+EndGlobal
