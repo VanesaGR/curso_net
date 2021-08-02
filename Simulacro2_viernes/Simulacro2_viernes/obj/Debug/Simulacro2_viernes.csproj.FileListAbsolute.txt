@@ -1,0 +1,10 @@
+C:\Users\Tarde\Desktop\VanesaGR\curso_net\SIMULACRO2_VIERNES\Simulacro2_viernes\bin\Debug\Simulacro2_viernes.exe.config
+C:\Users\Tarde\Desktop\VanesaGR\curso_net\SIMULACRO2_VIERNES\Simulacro2_viernes\bin\Debug\Simulacro2_viernes.exe
+C:\Users\Tarde\Desktop\VanesaGR\curso_net\SIMULACRO2_VIERNES\Simulacro2_viernes\bin\Debug\Simulacro2_viernes.pdb
+C:\Users\Tarde\Desktop\VanesaGR\curso_net\SIMULACRO2_VIERNES\Simulacro2_viernes\obj\Debug\Simulacro2_viernes.csproj.AssemblyReference.cache
+C:\Users\Tarde\Desktop\VanesaGR\curso_net\SIMULACRO2_VIERNES\Simulacro2_viernes\obj\Debug\Simulacro2_viernes.Form1.resources
+C:\Users\Tarde\Desktop\VanesaGR\curso_net\SIMULACRO2_VIERNES\Simulacro2_viernes\obj\Debug\Simulacro2_viernes.Properties.Resources.resources
+C:\Users\Tarde\Desktop\VanesaGR\curso_net\SIMULACRO2_VIERNES\Simulacro2_viernes\obj\Debug\Simulacro2_viernes.csproj.GenerateResource.cache
+C:\Users\Tarde\Desktop\VanesaGR\curso_net\SIMULACRO2_VIERNES\Simulacro2_viernes\obj\Debug\Simulacro2_viernes.csproj.CoreCompileInputs.cache
+C:\Users\Tarde\Desktop\VanesaGR\curso_net\SIMULACRO2_VIERNES\Simulacro2_viernes\obj\Debug\Simulacro2_viernes.exe
+C:\Users\Tarde\Desktop\VanesaGR\curso_net\SIMULACRO2_VIERNES\Simulacro2_viernes\obj\Debug\Simulacro2_viernes.pdb

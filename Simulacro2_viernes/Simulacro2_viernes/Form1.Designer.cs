@@ -30,7 +30,7 @@ namespace Simulacro2_viernes
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.gridDatos = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.txtId = new System.Windows.Forms.TextBox();
@@ -38,14 +38,16 @@ namespace Simulacro2_viernes
             this.label4 = new System.Windows.Forms.Label();
             this.txtSurname = new System.Windows.Forms.TextBox();
             this.Age = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.txtAge = new System.Windows.Forms.TextBox();
+            this.cbMarried = new System.Windows.Forms.CheckBox();
             this.btnAlta = new System.Windows.Forms.Button();
             this.btnModifica = new System.Windows.Forms.Button();
             this.btnBaja = new System.Windows.Forms.Button();
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.btnBuscar = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.Reset = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.gridDatos)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -58,13 +60,14 @@ namespace Simulacro2_viernes
             this.label1.TabIndex = 0;
             this.label1.Text = "SISTEMA DE GESTIÓN DE HOSPITAL";
             // 
-            // dataGridView1
+            // gridDatos
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(442, 110);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(555, 461);
-            this.dataGridView1.TabIndex = 1;
+            this.gridDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gridDatos.Location = new System.Drawing.Point(435, 110);
+            this.gridDatos.Name = "gridDatos";
+            this.gridDatos.Size = new System.Drawing.Size(544, 461);
+            this.gridDatos.TabIndex = 1;
+            this.gridDatos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridDatos_CellContentClick);
             // 
             // label2
             // 
@@ -130,24 +133,24 @@ namespace Simulacro2_viernes
             this.Age.TabIndex = 8;
             this.Age.Text = "Age";
             // 
-            // textBox1
+            // txtAge
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.textBox1.Location = new System.Drawing.Point(144, 311);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 23);
-            this.textBox1.TabIndex = 9;
+            this.txtAge.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.txtAge.Location = new System.Drawing.Point(144, 311);
+            this.txtAge.Name = "txtAge";
+            this.txtAge.Size = new System.Drawing.Size(100, 23);
+            this.txtAge.TabIndex = 9;
             // 
-            // checkBox1
+            // cbMarried
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.checkBox1.Location = new System.Drawing.Point(62, 401);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(75, 21);
-            this.checkBox1.TabIndex = 10;
-            this.checkBox1.Text = "Married";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.cbMarried.AutoSize = true;
+            this.cbMarried.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.cbMarried.Location = new System.Drawing.Point(62, 401);
+            this.cbMarried.Name = "cbMarried";
+            this.cbMarried.Size = new System.Drawing.Size(75, 21);
+            this.cbMarried.TabIndex = 10;
+            this.cbMarried.Text = "Married";
+            this.cbMarried.UseVisualStyleBackColor = true;
             // 
             // btnAlta
             // 
@@ -158,6 +161,7 @@ namespace Simulacro2_viernes
             this.btnAlta.TabIndex = 11;
             this.btnAlta.Text = "Alta";
             this.btnAlta.UseVisualStyleBackColor = true;
+            this.btnAlta.Click += new System.EventHandler(this.btnAlta_Click);
             // 
             // btnModifica
             // 
@@ -168,6 +172,7 @@ namespace Simulacro2_viernes
             this.btnModifica.TabIndex = 12;
             this.btnModifica.Text = "Modificacion";
             this.btnModifica.UseVisualStyleBackColor = true;
+            this.btnModifica.Click += new System.EventHandler(this.btnModifica_Click);
             // 
             // btnBaja
             // 
@@ -178,6 +183,7 @@ namespace Simulacro2_viernes
             this.btnBaja.TabIndex = 13;
             this.btnBaja.Text = "Baja";
             this.btnBaja.UseVisualStyleBackColor = true;
+            this.btnBaja.Click += new System.EventHandler(this.btnBaja_Click);
             // 
             // txtBuscar
             // 
@@ -186,6 +192,7 @@ namespace Simulacro2_viernes
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(194, 23);
             this.txtBuscar.TabIndex = 14;
+            this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
             // 
             // btnBuscar
             // 
@@ -196,19 +203,42 @@ namespace Simulacro2_viernes
             this.btnBuscar.TabIndex = 15;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(661, 612);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(299, 20);
+            this.textBox1.TabIndex = 16;
+            this.textBox1.Text = "0";
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // Reset
+            // 
+            this.Reset.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.Reset.Location = new System.Drawing.Point(305, 90);
+            this.Reset.Name = "Reset";
+            this.Reset.Size = new System.Drawing.Size(99, 41);
+            this.Reset.TabIndex = 17;
+            this.Reset.Text = "Reset";
+            this.Reset.UseVisualStyleBackColor = true;
+            this.Reset.Click += new System.EventHandler(this.Reset_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1026, 677);
+            this.Controls.Add(this.Reset);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.txtBuscar);
             this.Controls.Add(this.btnBaja);
             this.Controls.Add(this.btnModifica);
             this.Controls.Add(this.btnAlta);
-            this.Controls.Add(this.checkBox1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.cbMarried);
+            this.Controls.Add(this.txtAge);
             this.Controls.Add(this.Age);
             this.Controls.Add(this.txtSurname);
             this.Controls.Add(this.label4);
@@ -216,11 +246,12 @@ namespace Simulacro2_viernes
             this.Controls.Add(this.txtId);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.gridDatos);
             this.Controls.Add(this.label1);
             this.Name = "Form1";
             this.Text = "Age";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.Form1_Load_1);
+            ((System.ComponentModel.ISupportInitialize)(this.gridDatos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -229,7 +260,7 @@ namespace Simulacro2_viernes
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView gridDatos;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtId;
@@ -237,13 +268,15 @@ namespace Simulacro2_viernes
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtSurname;
         private System.Windows.Forms.Label Age;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.TextBox txtAge;
+        private System.Windows.Forms.CheckBox cbMarried;
         private System.Windows.Forms.Button btnAlta;
         private System.Windows.Forms.Button btnModifica;
         private System.Windows.Forms.Button btnBaja;
         private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.Button btnBuscar;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button Reset;
     }
 }
 
