@@ -25,8 +25,8 @@ namespace HUCANET
 
         void cargarGrid()
         {
-            var cargaGrid = from p in baseDatos.pacientes
-                            select p;
+            var cargaGrid = from pacientes in baseDatos.pacientes
+                            select pacientes;
             gridDatos.DataSource = cargaGrid;
         }
 

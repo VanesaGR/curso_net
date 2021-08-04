@@ -165,9 +165,9 @@ namespace HUCANET
             // txtSS
             // 
             this.txtSS.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.txtSS.Location = new System.Drawing.Point(170, 401);
+            this.txtSS.Location = new System.Drawing.Point(151, 401);
             this.txtSS.Name = "txtSS";
-            this.txtSS.Size = new System.Drawing.Size(322, 23);
+            this.txtSS.Size = new System.Drawing.Size(341, 23);
             this.txtSS.TabIndex = 12;
             // 
             // label6
@@ -185,7 +185,7 @@ namespace HUCANET
             this.txtDireccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.txtDireccion.Location = new System.Drawing.Point(151, 317);
             this.txtDireccion.Name = "txtDireccion";
-            this.txtDireccion.Size = new System.Drawing.Size(294, 23);
+            this.txtDireccion.Size = new System.Drawing.Size(341, 23);
             this.txtDireccion.TabIndex = 10;
             // 
             // label5
