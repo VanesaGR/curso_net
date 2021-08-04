@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="HUCA" Class="DataClasses1DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=ASATA406\SQLEXPRESSVANESA;Initial Catalog=HUCA;User ID=sa" SettingsObjectName="HUCANET.Properties.Settings" SettingsPropertyName="HUCAConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.pacientes" Member="pacientes">
+    <Type Name="pacientes">
+      <Column Name="inscripcion" Type="System.String" DbType="VarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="nombre" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="sexo" Type="System.String" DbType="VarChar(2)" CanBeNull="true" />
+      <Column Name="fecha" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="direccion" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ss" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+</Database>

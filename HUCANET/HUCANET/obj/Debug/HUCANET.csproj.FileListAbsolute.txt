@@ -1,0 +1,10 @@
+C:\Users\Tarde\Desktop\VanesaGR\curso_net\HUCANET\HUCANET\bin\Debug\HUCANET.exe.config
+C:\Users\Tarde\Desktop\VanesaGR\curso_net\HUCANET\HUCANET\bin\Debug\HUCANET.exe
+C:\Users\Tarde\Desktop\VanesaGR\curso_net\HUCANET\HUCANET\bin\Debug\HUCANET.pdb
+C:\Users\Tarde\Desktop\VanesaGR\curso_net\HUCANET\HUCANET\obj\Debug\HUCANET.csproj.AssemblyReference.cache
+C:\Users\Tarde\Desktop\VanesaGR\curso_net\HUCANET\HUCANET\obj\Debug\HUCANET.Form1.resources
+C:\Users\Tarde\Desktop\VanesaGR\curso_net\HUCANET\HUCANET\obj\Debug\HUCANET.Properties.Resources.resources
+C:\Users\Tarde\Desktop\VanesaGR\curso_net\HUCANET\HUCANET\obj\Debug\HUCANET.csproj.GenerateResource.cache
+C:\Users\Tarde\Desktop\VanesaGR\curso_net\HUCANET\HUCANET\obj\Debug\HUCANET.csproj.CoreCompileInputs.cache
+C:\Users\Tarde\Desktop\VanesaGR\curso_net\HUCANET\HUCANET\obj\Debug\HUCANET.exe
+C:\Users\Tarde\Desktop\VanesaGR\curso_net\HUCANET\HUCANET\obj\Debug\HUCANET.pdb
