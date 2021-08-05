@@ -11,6 +11,8 @@ namespace Productos
         static void Main(string[] args)
         {
             producto p1 = new producto(); //creacion del producto
+
+            var almacen = new List<producto>(); //carga de varios productos
            
             string opcion = ""; //opcion del menu
             double cuenta=0, acumulador=0;
@@ -26,8 +28,8 @@ namespace Productos
 
                 opcion = Console.ReadLine();
 
-                switch (opcion)
-                {
+                switch (opcion) //usando p1.Pnombre atacamos a las propiedades, usando c1, c2... también funciona
+                {               //declarando el tipo de variable antes.
                     case "1": //para introducir los datos de los productos
                         Console.WriteLine("Introduce el nombre");
                         p1.Pnombre= Console.ReadLine();
@@ -35,18 +37,27 @@ namespace Productos
                         p1.Pprecio= double.Parse(Console.ReadLine());
                         Console.WriteLine("Introduce la categoria");
                         p1.Pcategoria= Console.ReadLine();
+                        almacen.Add(p1);//añade al almacen
+                        p1.Mostrar(); //muestra lo que vamos metiendo en el almacen
                         Console.Clear();
                         break;
                     case "2":
-                        Console.WriteLine("Cantidad a comprar");
-                        pedido = int.Parse(Console.ReadLine());
-                        Console.Clear();
+                        int num = 0;
+
+                        foreach(var x in almacen)
+                        {
+                            x.Mostrar();
+                            Console.WriteLine();
+                            Console.WriteLine("Introduzca la cantidad de producto: ");
+                            pedido = int.Parse(Console.ReadLine());
+                            acumulador = (x.Pprecio * num) + acumulador;
+                            Console.WriteLine();
+                        }
                         break;
-                    case "3": 
-                        cuenta = p1.Pprecio * pedido-((p1.Pprecio * pedido)*0.21);                        
-                        acumulador = acumulador + cuenta;                        
-                        p1.Mostrar();                   
-                        Console.WriteLine("El coste total del pedido es: " + acumulador);
+                    case "3":
+                        Console.WriteLine("El total es: " + acumulador.ToString());
+                        Console.WriteLine("El IVA es: " + (acumulador * 0.21).ToString());
+                        Console.WriteLine("El total, IVA incluido es: " + (acumulador * 1.21).ToString());                        
                         Console.ReadLine();
                         Console.Clear();
                         break;
@@ -56,6 +67,7 @@ namespace Productos
                         break;
                     default:
                         Console.WriteLine("Error en los datos");
+                        Console.ReadLine();
                         break;
 
                 }
