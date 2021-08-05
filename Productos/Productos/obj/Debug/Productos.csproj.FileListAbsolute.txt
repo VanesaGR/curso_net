@@ -1,0 +1,7 @@
+C:\Users\Tarde\Desktop\VanesaGR\curso_net\Productos\Productos\bin\Debug\Productos.exe.config
+C:\Users\Tarde\Desktop\VanesaGR\curso_net\Productos\Productos\bin\Debug\Productos.exe
+C:\Users\Tarde\Desktop\VanesaGR\curso_net\Productos\Productos\bin\Debug\Productos.pdb
+C:\Users\Tarde\Desktop\VanesaGR\curso_net\Productos\Productos\obj\Debug\Productos.csproj.AssemblyReference.cache
+C:\Users\Tarde\Desktop\VanesaGR\curso_net\Productos\Productos\obj\Debug\Productos.csproj.CoreCompileInputs.cache
+C:\Users\Tarde\Desktop\VanesaGR\curso_net\Productos\Productos\obj\Debug\Productos.exe
+C:\Users\Tarde\Desktop\VanesaGR\curso_net\Productos\Productos\obj\Debug\Productos.pdb
