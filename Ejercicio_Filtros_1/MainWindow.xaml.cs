@@ -30,6 +30,10 @@ namespace Ejercicio_Filtros
             /// </summary>
             InitializeComponent();
             cargarGrid();
+            DatePicker1.SelectedDate = DateTime.Now;
+            DatePicker2.SelectedDate = DateTime.Now;
+            DatePicker3.SelectedDate = DateTime.Now;
+            DatePicker4.SelectedDate = DateTime.Now;
 
         }
 
@@ -165,26 +169,65 @@ namespace Ejercicio_Filtros
         }
         void cargarGridFechasUnoDos(DateTime f1, DateTime f2)
         {
-            string curso = ComboBox1.Text;
             string fecha = (DatePicker1.SelectedDate).ToString();
 
             var listagrid = from f in filtros.datosjueves
-                            where f.Fecha_Insc > f1 && f.Fecha_Insc < f2 && f.Curso == curso
+                            where f.Fecha_Insc >= f1 && f.Fecha_Insc <= f2
                             select f;
             DGV1.ItemsSource = listagrid;
         }
         private void btnFechas_Click(object sender, RoutedEventArgs e)
         {
-           if(CheckBox1.IsChecked==true && CheckBox2.IsChecked == true)
+           if(CheckBox1.IsChecked == true && CheckBox2.IsChecked == true && CheckBox3.IsChecked == false && CheckBox4.IsChecked == false)
             {
-                cargarGridFechasUnoDos(DatePicker1.DisplayDate, DatePicker2.DisplayDate);
+                cargarGridFechasUnoDos(DatePicker1.DisplayDate, DatePicker2.DisplayDate);                
+            }
+            else if (CheckBox1.IsChecked == false && CheckBox2.IsChecked == false && CheckBox4.IsChecked == true && CheckBox5.IsChecked == true)
+            {                          
+                cargarGridFechasTresCuatro(DatePicker3.DisplayDate, DatePicker4.DisplayDate);                              
+            }
+            else if (CheckBox1.IsChecked == true && CheckBox2.IsChecked == true && CheckBox4.IsChecked == true && CheckBox5.IsChecked == true)
+            {
+                cargarGridTodoFechas(DatePicker1.DisplayDate, DatePicker2.DisplayDate, DatePicker3.DisplayDate, DatePicker4.DisplayDate);
             }
             else
             {
                 cargarGridCurso();
             }
         }
+        void cargarGridFechasTresCuatro(DateTime f3, DateTime f4) //metodo para cargar filtro por fecha contratacion
+        {
+            string fecha = (DatePicker3.SelectedDate).ToString();
 
-       
+            var listagrid = from f in filtros.datosjueves
+                            where f.Fecha_Cont >= f3 && f.Fecha_Cont <= f4
+                            select f;
+            DGV1.ItemsSource = listagrid;
+        }
+        void cargarGridTodoFechas(DateTime f1, DateTime f2, DateTime f3, DateTime f4) //metodo para cargar todas las fechas
+        {
+            string fecha = (DatePicker1.SelectedDate).ToString();
+
+            var listagrid = from f in filtros.datosjueves
+                            where f.Fecha_Insc >= f1 && f.Fecha_Insc <= f2 && f.Fecha_Cont >= f3 && f.Fecha_Cont <= f4
+                            select f;
+            DGV1.ItemsSource = listagrid;
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            TextBox1.Text = "";
+            TextBox2.Text = "";
+            CheckBox1.IsChecked = false;
+            CheckBox2.IsChecked = false;
+            CheckBox3.IsChecked = false;
+            CheckBox4.IsChecked = false;
+            CheckBox5.IsChecked = false;
+            DatePicker1.SelectedDate = DateTime.Now;
+            DatePicker2.SelectedDate = DateTime.Now;
+            DatePicker3.SelectedDate = DateTime.Now;
+            DatePicker4.SelectedDate = DateTime.Now;
+            cargarGrid();
+        }
     }
 }
