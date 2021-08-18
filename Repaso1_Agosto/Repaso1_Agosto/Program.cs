@@ -9,7 +9,7 @@ namespace Repaso1_Agosto
     class Program
     {
         static void Main(string[] args)
-        {
+        {   //creacion de objetos empleado y cliente
             Empleado empleado1 = new Empleado();
            
             Cliente cliente1 = new Cliente();
@@ -26,7 +26,7 @@ namespace Repaso1_Agosto
 
                 switch (opcion)
                 {
-                    case "1":
+                    case "1": //insercion de datos para empleado
                         Console.WriteLine("Introduce el nombre");
                         empleado1.Pnombre = Console.ReadLine();
                         Console.WriteLine("Introduce los apellidos");
@@ -35,13 +35,22 @@ namespace Repaso1_Agosto
                         empleado1.Pdocumento = Console.ReadLine();
                         Console.WriteLine("Introduce el tipo de contrato (F o T)");
                         empleado1.PtipoContrato = Console.ReadLine();
-                        Console.WriteLine("Introduce el sueldo");
-                        empleado1.Psueldo = double.Parse(Console.ReadLine());
+
+                        try //comprueba si el valor introducido es numérico y si no, lanza mensaje de error
+                        {
+                            Console.WriteLine("Introduce el sueldo");
+                            empleado1.Psueldo = double.Parse(Console.ReadLine());
+                        }
+                        catch
+                        {
+                            Console.WriteLine("El valor introducido no es numérico");
+                        }
+                        
                         empleado1.calcularSueldo(); //invoca la funcion que calcula el sueldo
                         empleado1.Mostrar();
                         Console.ReadLine();
                         break;
-                    case "2":
+                    case "2": //insercion de datos para cliente
                         Console.WriteLine("Introduce el nombre");
                         cliente1.Pnombre = Console.ReadLine();
                         Console.WriteLine("Introduce los apellidos");
