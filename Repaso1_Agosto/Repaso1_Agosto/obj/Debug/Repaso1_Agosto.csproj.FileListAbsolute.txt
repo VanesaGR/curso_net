@@ -1,0 +1,7 @@
+C:\Users\Tarde\Desktop\VanesaGR\curso_net\Repaso1_Agosto\Repaso1_Agosto\obj\Debug\Repaso1_Agosto.csproj.AssemblyReference.cache
+C:\Users\Tarde\Desktop\VanesaGR\curso_net\Repaso1_Agosto\Repaso1_Agosto\obj\Debug\Repaso1_Agosto.csproj.CoreCompileInputs.cache
+C:\Users\Tarde\Desktop\VanesaGR\curso_net\Repaso1_Agosto\Repaso1_Agosto\bin\Debug\Repaso1_Agosto.exe.config
+C:\Users\Tarde\Desktop\VanesaGR\curso_net\Repaso1_Agosto\Repaso1_Agosto\bin\Debug\Repaso1_Agosto.exe
+C:\Users\Tarde\Desktop\VanesaGR\curso_net\Repaso1_Agosto\Repaso1_Agosto\bin\Debug\Repaso1_Agosto.pdb
+C:\Users\Tarde\Desktop\VanesaGR\curso_net\Repaso1_Agosto\Repaso1_Agosto\obj\Debug\Repaso1_Agosto.exe
+C:\Users\Tarde\Desktop\VanesaGR\curso_net\Repaso1_Agosto\Repaso1_Agosto\obj\Debug\Repaso1_Agosto.pdb
