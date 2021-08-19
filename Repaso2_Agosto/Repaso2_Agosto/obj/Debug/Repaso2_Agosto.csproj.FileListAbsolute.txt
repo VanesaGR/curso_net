@@ -1,0 +1,15 @@
+C:\Users\Tarde\Desktop\VanesaGR\curso_net\Repaso2_Agosto\Repaso2_Agosto\bin\Debug\Repaso2_Agosto.exe.config
+C:\Users\Tarde\Desktop\VanesaGR\curso_net\Repaso2_Agosto\Repaso2_Agosto\bin\Debug\Repaso2_Agosto.exe
+C:\Users\Tarde\Desktop\VanesaGR\curso_net\Repaso2_Agosto\Repaso2_Agosto\bin\Debug\Repaso2_Agosto.pdb
+C:\Users\Tarde\Desktop\VanesaGR\curso_net\Repaso2_Agosto\Repaso2_Agosto\obj\Debug\Repaso2_Agosto.Form1.resources
+C:\Users\Tarde\Desktop\VanesaGR\curso_net\Repaso2_Agosto\Repaso2_Agosto\obj\Debug\Repaso2_Agosto.Properties.Resources.resources
+C:\Users\Tarde\Desktop\VanesaGR\curso_net\Repaso2_Agosto\Repaso2_Agosto\obj\Debug\Repaso2_Agosto.csproj.GenerateResource.cache
+C:\Users\Tarde\Desktop\VanesaGR\curso_net\Repaso2_Agosto\Repaso2_Agosto\obj\Debug\Repaso2_Agosto.csproj.CoreCompileInputs.cache
+C:\Users\Tarde\Desktop\VanesaGR\curso_net\Repaso2_Agosto\Repaso2_Agosto\obj\Debug\Repaso2_Agosto.exe
+C:\Users\Tarde\Desktop\VanesaGR\curso_net\Repaso2_Agosto\Repaso2_Agosto\obj\Debug\Repaso2_Agosto.pdb
+C:\Users\Tarde\Desktop\VanesaGR\curso_net\Repaso2_Agosto\Repaso2_Agosto\bin\Debug\EntityFramework.dll
+C:\Users\Tarde\Desktop\VanesaGR\curso_net\Repaso2_Agosto\Repaso2_Agosto\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Tarde\Desktop\VanesaGR\curso_net\Repaso2_Agosto\Repaso2_Agosto\bin\Debug\EntityFramework.xml
+C:\Users\Tarde\Desktop\VanesaGR\curso_net\Repaso2_Agosto\Repaso2_Agosto\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Tarde\Desktop\VanesaGR\curso_net\Repaso2_Agosto\Repaso2_Agosto\obj\Debug\Repaso2_Agosto.csproj.CopyComplete
+C:\Users\Tarde\Desktop\VanesaGR\curso_net\Repaso2_Agosto\Repaso2_Agosto\obj\Debug\Repaso2_Agosto.csproj.AssemblyReference.cache
