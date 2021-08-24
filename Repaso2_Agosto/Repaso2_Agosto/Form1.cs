@@ -17,7 +17,7 @@ namespace Repaso2_Agosto
         public Form1()
         {
             InitializeComponent();
-            //INVOCAMOS AL ENVENTO DE CARGAR GRID
+            //INVOCAMOS AL ENVENTO DE CARGAR GRID AL CARGAR EL FORMULARIO
             Cargargrid();
         }
 
@@ -25,6 +25,9 @@ namespace Repaso2_Agosto
         public void Cargargrid()
         {
             gridDatos.DataSource = ClientesEntity.cliente.ToList();
+
+            //TAMBIÉN PODEMOS SEGUIR UTILIZANDO LINQ
+            //GRIDDATOS.DATASOURCE=FROM CLIENTE IN CLIENTEENTITY.CLIENTES SELECT CLIENTE;
         }//cliente es la base de datos
 
         private void btnRegistrar_Click(object sender, EventArgs e)//boton para agregar registro
@@ -44,10 +47,14 @@ namespace Repaso2_Agosto
 
                     //CONTEXTO DE ENTIDADES Y AÑADIMOS AL CLIENTE
                     ClientesEntity.cliente.Add(Misclientes);
-                    ClientesEntity.SaveChanges(); //GUARDAR EL NUEVO REGISTRO EN LA BASE DE DATOS
-                    Cargargrid(); //REFRESCAMOS EL DATA GRID
+                //GUARDAR EL NUEVO REGISTRO EN LA BASE DE DATOS. ES GLOBAL TANTO PARA CLASES TIPO LINQ COMO PARA
+                //ENTIDADES
+                    ClientesEntity.SaveChanges();
+                //REFRESCAMOS EL DATA GRID
+                    Cargargrid(); 
                 
             }
+            //MOSTRAR MENSAJE MÁS CONCRETO DE QUÉ DATO FALTA
             catch
             {
                 if (txtDNI.Text == "" || txtNombre.Text != "" || txtApellidos.Text != "" || cbEstadoCivil.Text != "" ||
@@ -60,12 +67,16 @@ namespace Repaso2_Agosto
                     MessageBox.Show("Error, registro duplicado");
                 }
             }
-
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
             string textoDNI = txtDNI.Text;
+            //METODO LAMBDA QUE CONSIGUE A UN CLIENTE POR SU DNI Y LO VUELCA A UNA LISTA DE REGISTROS
+            //SI FILTRAMOS X NOMBRE, POR EJEMPLO, USAMOS CONTAINS
+            //(SE PUEDE PONER UN METODO LINQ, A ESCOGER)
+            //CON LINQ HABRIA QUE CREAR UN CLIENTE: CLIENTES MYCLIENTE... TRABAJARÍA CON UN CLIENTE DE FORMA
+            //INDIVIDUAL
             var BuscaCliente = ClientesEntity.cliente.Where(c => c.DNI == textoDNI).Single();
 
             txtNombre.Text=BuscaCliente.NOMBRES;
@@ -86,31 +97,38 @@ namespace Repaso2_Agosto
             var deleteCliente = ClientesEntity.cliente.Where(c => c.DNI == textoDNI).Single();
 
             ClientesEntity.cliente.Remove(deleteCliente); //BORRAMOS AL CLIENTE BUSCADO
-            ClientesEntity.SaveChanges();
-            Cargargrid();
+            ClientesEntity.SaveChanges(); //CONFIRMA LOS CAMBIOS
+            Cargargrid();//REFRESCO DE GRID
         }
 
         private void btnModificar_Click(object sender, EventArgs e)
         {//DEBERIA ESTAR CONTROLADO
          //DEFINE LA VARIABLE PARA EL DNI
-            //TODO: 
-            string textoDNI = txtDNI.Text;
+         //TODO: 
+            if (txtDNI.Text == "") MessageBox.Show("Tienes que introducir un DNI");
 
-            //MEDIANTE LINQ OBTENEMOS EL CLIENTE POR EL DNI
-            cliente Misclientes = (from c in ClientesEntity.cliente where c.DNI == textoDNI select c).Single();
-            
-            //DEFINIMOS LOS ATRIBUTOS DEL OBJETO Misclientes   
-            //Misclientes.DNI = txtDNI.Text;
-            Misclientes.NOMBRES = txtNombre.Text;
-            Misclientes.APELLIDOS = txtApellidos.Text;
-            Misclientes.ESTADO_CIVIL = cbEstadoCivil.Text;
-            Misclientes.TELEFONO = txtTelefono.Text;
-            Misclientes.EMAIL = txtEmail.Text;
-            Misclientes.FECHA_NACIMIENTO = dateTimePicker1.Value;
-            
-            //HACEMOS SALVADO EN LA BASE DE DATOS
-            ClientesEntity.SaveChanges();
-            Cargargrid();
+            else
+            {
+                string textoDNI = txtDNI.Text;
+
+                //MEDIANTE LINQ OBTENEMOS EL CLIENTE POR EL DNI
+                cliente Misclientes = (from c in ClientesEntity.cliente where c.DNI == textoDNI select c).Single();
+
+                //DEFINIMOS LOS ATRIBUTOS DEL OBJETO Misclientes
+                //EL DNI NO SE MODIFICA
+                //Misclientes.DNI = txtDNI.Text;
+                Misclientes.NOMBRES = txtNombre.Text;
+                Misclientes.APELLIDOS = txtApellidos.Text;
+                Misclientes.ESTADO_CIVIL = cbEstadoCivil.Text;
+                Misclientes.TELEFONO = txtTelefono.Text;
+                Misclientes.EMAIL = txtEmail.Text;
+                Misclientes.FECHA_NACIMIENTO = dateTimePicker1.Value;
+
+                //HACEMOS SALVADO EN LA BASE DE DATOS
+                ClientesEntity.SaveChanges();
+                //REFRESCAR EL DATAGRID
+                Cargargrid();
+            }
         }
 
         private void btn1_Click(object sender, EventArgs e) //PARA BUSCAR EL PRIMER REGISTRO DEL DATAGRID

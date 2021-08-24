@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="e91d6d8b34e34f23ad5faf5ee2fe9a4a" Name="Diagram1" >
+        <EntityTypeShape EntityType="Model1.NIVEL_RIESGO" Width="1.5" PointX="0.5" PointY="0.875" />
+        <EntityTypeShape EntityType="Model1.DEPARTAMENTO" Width="1.875" PointX="7.875" PointY="3.25" />
+        <EntityTypeShape EntityType="Model1.TIPO_DE_INGRESO" Width="2" PointX="11.625" PointY="4.875" />
+        <EntityTypeShape EntityType="Model1.TIPO_DE_DEDUCCION" Width="1.875" PointX="11.125" PointY="2.375" />
+        <EntityTypeShape EntityType="Model1.REGISTRO_TRANSACCION_DEDUCCION" Width="2.875" PointX="7.75" PointY="0.5" />
+        <EntityTypeShape EntityType="Model1.PUESTO" Width="2.125" PointX="1.125" PointY="4" />
+        <EntityTypeShape EntityType="Model1.EMPLEADO" Width="2.75" PointX="4.125" PointY="0.875" />
+        <AssociationConnector Association="Model1.NIVEL_RIESGOPUESTO" />
+        <AssociationConnector Association="Model1.PUESTOEMPLEADO" />
+        <AssociationConnector Association="Model1.TIPO_DE_DEDUCCIONREGISTRO_TRANSACCION_DEDUCCION" />
+        <EntityTypeShape EntityType="Model1.REGISTRO_TRANSACCION" Width="2.25" PointX="8.375" PointY="5.25" />
+        <AssociationConnector Association="Model1.TIPO_DE_INGRESOREGISTRO_TRANSACCION" />
+        <AssociationConnector Association="Model1.DEPARTAMENTOEMPLEADO" />
+        <AssociationConnector Association="Model1.EMPLEADOREGISTRO_TRANSACCION" />
+        <AssociationConnector Association="Model1.EMPLEADOREGISTRO_TRANSACCION_DEDUCCION" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

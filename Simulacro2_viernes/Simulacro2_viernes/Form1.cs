@@ -19,6 +19,10 @@ namespace Simulacro2_viernes //CON LINQ
 
         DataClasses1DataContext baseDatos = new DataClasses1DataContext();
 
+        private void Form1_Load_1(object sender, EventArgs e)
+        {
+            cargarGrid(); //CARGA EL GRID AL INICIAR EL FORMULARIO
+        }
         void cargarGrid()
         {
             var cargaGrid = from p in baseDatos.empleados
@@ -31,15 +35,11 @@ namespace Simulacro2_viernes //CON LINQ
             int numero = cargarGrid.Count();
             textBox1.Text = "SE HAN ENCONTRADO " + numero + " REGISTROS";
         }
-
-        private void Form1_Load_1(object sender, EventArgs e)
-        {
-            cargarGrid();
-        }
+                
         private void btnAlta_Click(object sender, EventArgs e)
-        {
+        {//BOTON PARA DAR DE ALTA UN REGISTRO NUEVO
             try
-            {
+            {//CONTROLA QUE ESTÉN TODOS LOS DATOS INTRODUCIDOS
                 empleados myempleado = new empleados();
 
                 myempleado.ID = int.Parse(txtId.Text);
@@ -48,8 +48,8 @@ namespace Simulacro2_viernes //CON LINQ
                 myempleado.Edad = int.Parse(txtAge.Text);
                 myempleado.Casado = cbMarried.Checked;
 
-                baseDatos.empleados.InsertOnSubmit(myempleado);
-                baseDatos.SubmitChanges();
+                baseDatos.empleados.InsertOnSubmit(myempleado); //AÑADE EL REGISTRO EN LA DATABASE
+                baseDatos.SubmitChanges(); //SE HACE EL COMMIT, LA CONFIRMACION
 
                 var cargarGrid = from empleados in baseDatos.empleados select empleados;
                 gridDatos.DataSource = cargarGrid;
@@ -116,12 +116,12 @@ namespace Simulacro2_viernes //CON LINQ
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            if (txtBuscar.Text != "")
+            if (txtBuscar.Text != "") //COMPRUEBA QUE EL CUADRO DE BUSQUEDA NO ESTA EN BLANCO
             {
                 empleados myempleado = baseDatos.empleados.Single(p =>
                 p.Nombre.Contains(txtBuscar.Text));
                            
-                string busca = txtBuscar.Text;
+                string busca = txtBuscar.Text; //SE PUEDE PONER TODOS LOS CAMPOS PARA QUE CARGUE EN LOS TXT                           
 
                 var cargaGrid = from empleados in baseDatos.empleados
                                 where empleados.Nombre.Contains(busca)
@@ -129,7 +129,7 @@ namespace Simulacro2_viernes //CON LINQ
                 gridDatos.DataSource = cargaGrid;
             }
             else
-            {
+            { //CARGA TODO EL GRID
                 var cargaGrid = from empleados in baseDatos.empleados
                                 select empleados;
                 gridDatos.DataSource = cargaGrid;
@@ -137,10 +137,7 @@ namespace Simulacro2_viernes //CON LINQ
                         
         }
 
-        private void gridDatos_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            
-        }
+        private void gridDatos_CellContentClick(object sender, DataGridViewCellEventArgs e) { }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {

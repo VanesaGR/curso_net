@@ -142,6 +142,7 @@ namespace HUCANET
             this.btnRead.TabIndex = 15;
             this.btnRead.Text = "Read";
             this.btnRead.UseVisualStyleBackColor = true;
+            this.btnRead.Click += new System.EventHandler(this.btnRead_Click);
             // 
             // btnCreate
             // 

@@ -17,12 +17,16 @@ namespace HUCANET
             InitializeComponent();
         }
 
+        //DEFINIMOS EL CONTEXTO DE CLASES
         DataClasses1DataContext baseDatos = new DataClasses1DataContext();
+
+        //CARGAMOS GRID CUANDO SE ABRE EL FORMULARIO
         private void Form1_Load(object sender, EventArgs e)
         {
             cargarGrid();
         }
 
+        //CON LINQ HACEMOS UNA CONSULTA PARA QUE CARGUE EL GRID
         void cargarGrid()
         {
             var cargaGrid = from pacientes in baseDatos.pacientes
@@ -60,8 +64,7 @@ namespace HUCANET
             catch
             {
                 MessageBox.Show("Fallo en la inserción de datos");
-            }
-           
+            }           
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
@@ -125,6 +128,11 @@ namespace HUCANET
         private void btnExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void btnRead_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
