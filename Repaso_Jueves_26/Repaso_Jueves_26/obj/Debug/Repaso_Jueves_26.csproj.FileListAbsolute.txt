@@ -1,0 +1,7 @@
+C:\Users\Tarde\Desktop\VanesaGR\curso_net\Repaso_Jueves_26\Repaso_Jueves_26\obj\Debug\Repaso_Jueves_26.csproj.AssemblyReference.cache
+C:\Users\Tarde\Desktop\VanesaGR\curso_net\Repaso_Jueves_26\Repaso_Jueves_26\obj\Debug\Repaso_Jueves_26.csproj.CoreCompileInputs.cache
+C:\Users\Tarde\Desktop\VanesaGR\curso_net\Repaso_Jueves_26\Repaso_Jueves_26\bin\Debug\Repaso_Jueves_26.exe.config
+C:\Users\Tarde\Desktop\VanesaGR\curso_net\Repaso_Jueves_26\Repaso_Jueves_26\bin\Debug\Repaso_Jueves_26.exe
+C:\Users\Tarde\Desktop\VanesaGR\curso_net\Repaso_Jueves_26\Repaso_Jueves_26\bin\Debug\Repaso_Jueves_26.pdb
+C:\Users\Tarde\Desktop\VanesaGR\curso_net\Repaso_Jueves_26\Repaso_Jueves_26\obj\Debug\Repaso_Jueves_26.exe
+C:\Users\Tarde\Desktop\VanesaGR\curso_net\Repaso_Jueves_26\Repaso_Jueves_26\obj\Debug\Repaso_Jueves_26.pdb
