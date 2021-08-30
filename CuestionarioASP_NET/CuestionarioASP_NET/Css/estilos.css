@@ -1,0 +1,19 @@
+﻿body {
+    font-family:'Book Antiqua';
+    color:olivedrab;
+    background-color:lightgray;
+}
+
+.pregunta{
+    font-weight:bold;
+    color:darkred;
+}
+
+.titulo{
+    font-weight:bold;
+    text-align: center;
+    font-style:italic;
+    color:darkgoldenrod;
+    font-size:larger;    
+}
+
