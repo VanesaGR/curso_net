@@ -1,0 +1,31 @@
+﻿h1{
+	font-weight:bold;
+}
+
+.fila {
+	width: 50%;
+	box-sizing: border-box;
+	padding: 1em;
+	clear: both;
+}
+
+div.label {
+	box-sizing: border-box;
+	width: 40%;
+	float: left;
+	text-align: right;
+	margin-right: 1em;
+}
+
+div.control {
+	box-sizing: border-box;
+	float: left;
+	width: 50%;
+}
+
+.boton {
+	margin: 1em;
+	margin-left: 0;
+	height: 2em;
+	width: 15em;
+}
