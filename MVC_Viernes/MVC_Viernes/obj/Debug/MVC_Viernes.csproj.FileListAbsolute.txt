@@ -83,3 +83,4 @@ C:\Users\Tarde\Desktop\VanesaGR\curso_net\MVC_Viernes\MVC_Viernes\obj\Debug\MVC_
 C:\Users\Tarde\Desktop\VanesaGR\curso_net\MVC_Viernes\MVC_Viernes\obj\Debug\MVC_Viernes.csproj.CopyComplete
 C:\Users\Tarde\Desktop\VanesaGR\curso_net\MVC_Viernes\MVC_Viernes\obj\Debug\MVC_Viernes.dll
 C:\Users\Tarde\Desktop\VanesaGR\curso_net\MVC_Viernes\MVC_Viernes\obj\Debug\MVC_Viernes.pdb
+C:\Users\Tarde\Desktop\VanesaGR\curso_net\MVC_Viernes\MVC_Viernes\obj\Debug\MVC_Viernes.csproj.AssemblyReference.cache
