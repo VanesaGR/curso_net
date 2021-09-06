@@ -1,0 +1,58 @@
+﻿<!-- arroba model MVC_Viernes.Models.Libro-->
+
+@model IEnumerable<MVC_Viernes.Models.Libro>
+
+<!--arroba{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>arroba ViewBag.Mensaje-->
+
+@{
+    string titulo = "Página principal";
+    int dia = DateTime.Now.Day;
+    int mes = DateTime.Now.Month;
+    int año = DateTime.Now.Year;
+
+    string cadena;
+
+    if (dia > 15)
+    {
+        cadena = "Estamos en la primera parte del mes";
+    }
+    else
+    {
+        cadena = "Estamos en la segunda parte del mes";
+    }
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <body>
+        <div>
+            <h1>@titulo</h1>
+            <p>Fecha: @dia/@mes/@año</p>
+            <p>@cadena</p>
+        </div>
+        <div>
+            <!--El título del libro es <strong>arroba Model.Titulo</strong>-->
+        </div>
+
+        <div>
+            Listado de libros
+            <ul>
+                @foreach (var libro in Model)
+                {
+                    <li> @libro.Titulo (@libro.TipoLibro)</li>
+                }
+            </ul>
+        </div>
+
+
+    </body>
+</head>
+</html>
+
