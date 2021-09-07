@@ -8,7 +8,7 @@ using MVC_Viernes.Models;
 namespace MVC_Viernes.Controllers
 {    
     public class BibliotecaController : Controller
-    {
+    {   //creamos la clase estatica biblioteca para poder invocarla en el controlador
         static Biblioteca miBiblioteca = new Biblioteca();
         // GET: Biblioteca
         public ActionResult Index()
@@ -19,7 +19,7 @@ namespace MVC_Viernes.Controllers
         // GET: Biblioteca/Details/5
         public ActionResult Details(int id)
         {
-            return View();
+            return View(miBiblioteca.ObtenerPorIsbn(id.ToString()));
         }
 
         // GET: Biblioteca/Create
@@ -39,7 +39,7 @@ namespace MVC_Viernes.Controllers
                 {
                     Isbn = (miBiblioteca.Libros.Count() + 1).ToString(),
                     Titulo = collection["Titulo"],
-                    TipoLibro=collection["Categoria"]
+                    TipoLibro=collection["TipoLibro"]
                 });
 
                 return RedirectToAction("Index");
@@ -53,7 +53,7 @@ namespace MVC_Viernes.Controllers
         // GET: Biblioteca/Edit/5
         public ActionResult Edit(int id)
         {
-            return View();
+            return View(miBiblioteca.ObtenerPorIsbn(id.ToString()));
         }
 
         // POST: Biblioteca/Edit/5
@@ -63,7 +63,12 @@ namespace MVC_Viernes.Controllers
             try
             {
                 // TODO: Add update logic here
-
+                foreach(Libro l in miBiblioteca.Libros)
+                if(l.Isbn==id.ToString())
+                {
+                    l.Titulo = collection["Titulo"];
+                    l.TipoLibro = collection["TipoLibro"];
+                };
                 return RedirectToAction("Index");
             }
             catch
@@ -75,7 +80,7 @@ namespace MVC_Viernes.Controllers
         // GET: Biblioteca/Delete/5
         public ActionResult Delete(int id)
         {
-            return View();
+            return View(miBiblioteca.ObtenerPorIsbn(id.ToString()));
         }
 
         // POST: Biblioteca/Delete/5
@@ -85,6 +90,10 @@ namespace MVC_Viernes.Controllers
             try
             {
                 // TODO: Add delete logic here
+                foreach(Libro l in miBiblioteca.Libros)
+                {
+                    if (l.Isbn == id.ToString()) miBiblioteca.Libros.Remove(l);
+                }
 
                 return RedirectToAction("Index");
             }

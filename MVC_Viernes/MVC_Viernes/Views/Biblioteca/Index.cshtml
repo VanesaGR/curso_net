@@ -1,4 +1,7 @@
-﻿@model IEnumerable<MVC_Viernes.Models.Libro>
+﻿@*vista para mostrar los libros*@
+@*nombre de proyecto.models.clase*@
+
+@model IEnumerable<MVC_Viernes.Models.Libro>
 
 @{
     ViewBag.Title = "Index";
@@ -19,17 +22,19 @@
 @foreach (var item in Model) {
     <tr>
         <td>
-            @item.Isbn
+            @Html.DisplayFor(modelitem=>item.Isbn)
             
         </td>
         <td>
-            @item.Titulo
+            @Html.DisplayFor(modelitem=>item.Titulo)
             
         <td>
-            @item.TipoLibro
-            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            @Html.DisplayFor(modelitem=>item.TipoLibro)            
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id = item.Isbn }) |
+            @Html.ActionLink("Details", "Details", new { id = item.Isbn }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.Isbn })
         </td>
     </tr>
 }

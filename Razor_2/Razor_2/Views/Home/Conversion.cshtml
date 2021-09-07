@@ -1,0 +1,33 @@
+﻿
+@{
+    ViewBag.Title = "Conversion";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Conversion</title>
+</head>
+<body>
+    <h3>Conversion</h3>
+    <hr />
+    <h3>Celsius a Farenheit</h3>
+    <div>
+        <form method="post">
+            Celsius:<input type="text" name="txtc" value="" />
+            Farenheit:<input type="text" name="txtf" value="@ViewBag.f" />
+            <hr />
+            <h3>Pulgadas a milímetros</h3>
+            Pulgadas:<input type="text" name="txtp" value="" />
+            Milímetros:<input type="text" name="txtm" value="@ViewBag.m"
+            <hr />
+            <input type="submit" value="convertir" />
+        </form>
+    </div>
+    <div>
+        @Html.ActionLink("Volver al menú principal", "Index")
+    </div>
+</body>
+</html>
+
